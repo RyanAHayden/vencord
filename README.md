@@ -7,7 +7,6 @@ One Vencord setup shared by macOS ([hypr-mac](https://github.com/RyanAHayden/hyp
 What's in it:
 - [vimcord](https://github.com/RyanAHayden/vimcord): vim-style keys, panes, modes and an nvim look in nvim's own colors (Omarchy's current theme on Linux)
 - plugins: AlwaysExpandRoles, Dearrow, FakeNitro, FixSpotifyEmbeds, FixYoutubeEmbeds, GameActivityToggle, NoF1, NoOnboardingDelay, NoTrack (and the APIs they need)
-- theme: [system24](https://github.com/refact0r/system24) (auto flavor), by link. vimcord's look loads system24 itself, so this only shows with that look turned off
 - `disableMinSize`: Discord's ~940px minimum width is off, so it tiles in a narrow column (yabai/Hyprland)
 
 Quit Discord before running `setup.sh`: it can't be patched while running, and would write its old settings back.

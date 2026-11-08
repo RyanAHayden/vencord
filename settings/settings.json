@@ -2,9 +2,7 @@
     "autoUpdate": true,
     "autoUpdateNotification": true,
     "useQuickCss": true,
-    "themeLinks": [
-        "https://raw.githubusercontent.com/refact0r/system24/refs/heads/main/theme/flavors/system24-auto.theme.css"
-    ],
+    "themeLinks": [],
     "eagerPatches": false,
     "enabledThemes": [],
     "enableReactDevtools": false,
