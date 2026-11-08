@@ -37,9 +37,12 @@ echo "==> vencord: settings"
 mkdir -p "$DIR"
 # linked, not copied: Vencord rewrites settings.json in place (writeFileSync follows the link), so changes made in
 # its settings land here
+linked=
 for f in settings.json quickCss.css; do
+	[ "$(readlink "$DIR/$f" 2>/dev/null)" = "$REPO/$f" ] && continue
 	[ -e "$DIR/$f" ] && [ ! -L "$DIR/$f" ] && mv "$DIR/$f" "$DIR/$f.bak"
 	ln -sfn "$REPO/$f" "$DIR/$f"
+	linked=1
 done
-running && echo "  Discord is running: quit it fully and reopen to apply (it would write its old settings back)"
+[ -n "$linked" ] && running && echo "  Discord is running: quit it fully and reopen to apply (it would write its old settings back)"
 echo "==> vencord: done"
