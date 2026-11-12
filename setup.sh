@@ -5,8 +5,9 @@
 set -euo pipefail
 
 REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-# Vencord's source, built here; Discord loads it from dist/ (userplugins like vimcord need a source build)
-SRC="${VENCORD_SRC:-${XDG_DATA_HOME:-$HOME/.local/share}/vencord-src}"
+# Vencord's source, built here; Discord loads it from dist/ (userplugins like vimcord need a source build). The same
+# checkout vimcord is worked on in, so a build there is what Discord runs
+SRC="${VENCORD_SRC:-$HOME/repos/Vencord}"
 
 if [ "$(uname)" = Darwin ]; then
 	T="$HOME/Library/Application Support/Vencord/settings"
