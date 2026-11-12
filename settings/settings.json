@@ -587,9 +587,12 @@
             "look": "nvim",
             "colorsFile": "",
             "font": "",
-            "hideHeader": true,
+            "hideHeader": false,
             "escapeLeavesInput": true,
-            "hideWindowButtons": true
+            "hideWindowButtons": true,
+            "tuiStyle": true,
+            "colors": "auto",
+            "discordKeyboardMode": false
         },
         "DirectFileDownload": {
             "enabled": false
@@ -599,6 +602,9 @@
         },
         "MutedServersActivityBadge": {
             "enabled": false
+        },
+        "FixDiscordCss": {
+            "enabled": true
         }
     },
     "uiElements": {
@@ -615,7 +621,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1794105417748
+        "settingsSyncVersion": 1794240828583
     },
     "windowsMaterial": "none",
     "nativeTitleBar": false
